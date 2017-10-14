@@ -1,0 +1,6 @@
+framework module Pods_AuraApp {
+  umbrella header "Pods-AuraApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

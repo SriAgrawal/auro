@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16B2657" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TBL_MESSAGE" representedClassName="TBL_MESSAGE" syncable="YES" codeGenerationType="class">
+        <attribute name="messageId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userToMessage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TBL_MESSAGE" inverseName="userToMessage" inverseEntity="TBL_MESSAGE" syncable="YES"/>
+    </entity>
+    <entity name="TBL_USERCHAT" representedClassName="TBL_USERCHAT" syncable="YES" codeGenerationType="class">
+        <attribute name="recevierUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="senderUserId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="TBL_USERCHAT" positionX="-7893" positionY="-2320" width="128" height="73"/>
+        <element name="TBL_MESSAGE" positionX="-7677" positionY="-2322" width="128" height="103"/>
+    </elements>
+</model>

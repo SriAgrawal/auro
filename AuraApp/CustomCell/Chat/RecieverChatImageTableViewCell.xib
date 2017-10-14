@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverChatImageTableViewCell" rowHeight="143" id="KGk-i7-Jjw" customClass="RecieverChatImageTableViewCell" customModule="AuraApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="142.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-pi-qIb">
+                        <rect key="frame" x="27" y="2" width="60" height="60"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="EN9-Z4-nmf"/>
+                            <constraint firstAttribute="height" constant="60" id="siA-1w-CKB"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xyD-Yr-Bxj">
+                        <rect key="frame" x="88" y="2" width="220" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="Jsf-MR-rSv"/>
+                            <constraint firstAttribute="width" constant="220" id="WHH-e8-CRg"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lC-R6-qNr">
+                        <rect key="frame" x="88" y="2" width="220" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="Z4S-Ej-7Ji"/>
+                            <constraint firstAttribute="width" constant="220" id="uY7-M6-bhe"/>
+                        </constraints>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7q4-0M-kwt">
+                        <rect key="frame" x="88" y="2" width="220" height="130"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-62-I1D">
+                                <rect key="frame" x="73" y="50" width="74" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ouw-gO-fEf"/>
+                                    <constraint firstAttribute="width" constant="74" id="pwD-7r-ZXc"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HuZ-62-I1D" firstAttribute="centerX" secondItem="7q4-0M-kwt" secondAttribute="centerX" id="6XY-T3-MZo"/>
+                            <constraint firstItem="HuZ-62-I1D" firstAttribute="centerY" secondItem="7q4-0M-kwt" secondAttribute="centerY" id="7TD-Rh-iWb"/>
+                            <constraint firstAttribute="width" constant="220" id="ohq-nI-GCG"/>
+                            <constraint firstAttribute="height" constant="130" id="sky-wv-ZLq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xyD-Yr-Bxj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="7Ky-kD-MYT"/>
+                    <constraint firstItem="7q4-0M-kwt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="8PS-G8-jjr"/>
+                    <constraint firstItem="fEH-pi-qIb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="27" id="Lih-xw-nwc"/>
+                    <constraint firstItem="0lC-R6-qNr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="hh1-au-unI"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xyD-Yr-Bxj" secondAttribute="bottom" constant="10" id="qFN-JC-VE3"/>
+                    <constraint firstItem="xyD-Yr-Bxj" firstAttribute="leading" secondItem="fEH-pi-qIb" secondAttribute="trailing" constant="1" id="rJS-KN-80Y"/>
+                    <constraint firstItem="7q4-0M-kwt" firstAttribute="leading" secondItem="fEH-pi-qIb" secondAttribute="trailing" constant="1" id="rzf-MY-vjz"/>
+                    <constraint firstItem="fEH-pi-qIb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="zaU-Jh-aFF"/>
+                    <constraint firstItem="0lC-R6-qNr" firstAttribute="leading" secondItem="fEH-pi-qIb" secondAttribute="trailing" constant="1" id="znv-J5-wJI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="blurView" destination="7q4-0M-kwt" id="myc-4J-cdr"/>
+                <outlet property="downloadButton" destination="HuZ-62-I1D" id="eoc-4h-FzE"/>
+                <outlet property="recieverProfileImageView" destination="fEH-pi-qIb" id="bcV-MB-NDX"/>
+                <outlet property="recieverSendedImageView" destination="xyD-Yr-Bxj" id="bPG-0l-whS"/>
+                <outlet property="recieverShowPhotoButton" destination="0lC-R6-qNr" id="ubO-9f-9vB"/>
+            </connections>
+            <point key="canvasLocation" x="-31.5" y="88.5"/>
+        </tableViewCell>
+    </objects>
+</document>

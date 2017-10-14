@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+        <array key="GOTHICB.TTF">
+            <string>CenturyGothic-Bold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="AuraApp" customModuleProvider="target">
+            <connections>
+                <outlet property="countryCodeLabel" destination="RCu-lQ-qkM" id="QzP-e7-hEa"/>
+                <outlet property="countryErrorLabel" destination="RDz-sX-ogT" id="LUM-zE-2kS"/>
+                <outlet property="countryTextField" destination="wP3-kT-K0E" id="9Kg-Ap-lfk"/>
+                <outlet property="errorLabel" destination="8Tm-9w-SzW" id="bZI-aK-LEa"/>
+                <outlet property="mobileNumberTextField" destination="c9E-3t-Uiy" id="DIZ-oM-Q8r"/>
+                <outlet property="mobileNumberTextView" destination="VYf-Pe-V3o" id="ACm-jh-DH3"/>
+                <outlet property="navigationTitleLabel" destination="3xh-jP-Ure" id="Zir-Ij-bXJ"/>
+                <outlet property="titleTopConstraint" destination="v4v-3N-5xB" id="qbj-XC-zvU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Q-DJ-1ch" customClass="CustomShadow" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-jP-Ure">
+                            <rect key="frame" x="85" y="29" width="234" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="lUU-X0-2b5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQV-dF-tcj">
+                            <rect key="frame" x="2" y="4" width="48" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="4fq-ed-LGk"/>
+                                <constraint firstAttribute="width" constant="48" id="Zml-lB-J2b"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="5" minY="9" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="back_icon"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="6mF-Hm-ZK5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="3xh-jP-Ure" firstAttribute="top" secondItem="Q3Q-DJ-1ch" secondAttribute="top" constant="29" id="2sB-X4-5YU"/>
+                        <constraint firstItem="KQV-dF-tcj" firstAttribute="top" secondItem="Q3Q-DJ-1ch" secondAttribute="top" constant="4" id="9tK-Cx-sCz"/>
+                        <constraint firstItem="3xh-jP-Ure" firstAttribute="centerX" secondItem="Q3Q-DJ-1ch" secondAttribute="centerX" constant="14.5" id="DKA-2P-Ko1"/>
+                        <constraint firstAttribute="height" constant="64" id="RNH-hw-lv2"/>
+                        <constraint firstItem="3xh-jP-Ure" firstAttribute="leading" secondItem="Q3Q-DJ-1ch" secondAttribute="leading" constant="85" id="l4g-4I-iAb"/>
+                        <constraint firstItem="KQV-dF-tcj" firstAttribute="leading" secondItem="Q3Q-DJ-1ch" secondAttribute="leading" constant="2" id="pvr-3a-COE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E0n-0I-YtT">
+                    <rect key="frame" x="40" y="129" width="295" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="SxR-87-WS9"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Please confirm your country code and enter your phone number.">
+                            <attributes>
+                                <font key="NSFont" size="15" name="CenturyGothic"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="7" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Select Country" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="wP3-kT-K0E" customClass="CustomTextField" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="40" y="216" width="295" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="f5L-LQ-5Iw"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYR-f9-4tS" customClass="CustomButton" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="95" y="342" width="185" height="45"/>
+                    <color key="backgroundColor" red="0.00023800655617378652" green="0.78806978464126587" blue="0.78021043539047241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="185" id="duo-25-zBK"/>
+                        <constraint firstAttribute="height" constant="45" id="zT2-Rq-0SL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
+                    <state key="normal" title="Send OTP">
+                        <color key="titleColor" red="0.99994784589999997" green="1" blue="0.99987405539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="sendOtpButtonAction:" destination="-1" eventType="touchUpInside" id="F34-AE-AY1"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYf-Pe-V3o">
+                    <rect key="frame" x="40" y="276" width="295" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FtY-7K-7k3"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZN-Xt-JIq">
+                    <rect key="frame" x="109" y="276" width="1" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="2pU-8g-41K"/>
+                        <constraint firstAttribute="height" constant="40" id="KUC-ap-CSp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCu-lQ-qkM">
+                    <rect key="frame" x="51" y="276" width="57" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="57" id="6RK-ZJ-oco"/>
+                        <constraint firstAttribute="height" constant="40" id="TFb-y7-A1g"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c9E-3t-Uiy">
+                    <rect key="frame" x="124" y="276" width="205" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hG2-Wu-QN1"/>
+                        <constraint firstAttribute="width" constant="205" id="lay-A3-bbU"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Tm-9w-SzW">
+                    <rect key="frame" x="41" y="320" width="295" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="q3p-6w-Wer"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="10"/>
+                    <color key="textColor" red="1" green="0.47058823529411764" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_icon" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-kP-y5H">
+                    <rect key="frame" x="300" y="226" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="8NC-g5-r9l"/>
+                        <constraint firstAttribute="width" constant="20" id="jBB-JL-ZBX"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDz-sX-ogT">
+                    <rect key="frame" x="41" y="260" width="295" height="11"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="11" id="f2q-fL-6UP"/>
+                        <constraint firstAttribute="width" constant="295" id="pB7-Ts-IWj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="11"/>
+                    <color key="textColor" red="1" green="0.47058823529999999" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kYR-f9-4tS" firstAttribute="top" secondItem="c9E-3t-Uiy" secondAttribute="bottom" constant="26" id="31X-x5-Tbb"/>
+                <constraint firstAttribute="trailing" secondItem="wP3-kT-K0E" secondAttribute="trailing" constant="40" id="4Fs-Xb-BKz"/>
+                <constraint firstAttribute="trailing" secondItem="E0n-0I-YtT" secondAttribute="trailing" constant="40" id="C7v-gA-mxT"/>
+                <constraint firstItem="wP3-kT-K0E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="FcS-C4-Jdj"/>
+                <constraint firstAttribute="trailing" secondItem="VYf-Pe-V3o" secondAttribute="trailing" constant="40" id="Gl1-xX-1BQ"/>
+                <constraint firstItem="8ZN-Xt-JIq" firstAttribute="leading" secondItem="RCu-lQ-qkM" secondAttribute="trailing" constant="1" id="H6H-HA-Y9B"/>
+                <constraint firstAttribute="trailing" secondItem="Q3Q-DJ-1ch" secondAttribute="trailing" id="Lk2-x6-RyV"/>
+                <constraint firstItem="8Tm-9w-SzW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="41" id="O6H-WM-Nj1"/>
+                <constraint firstItem="c9E-3t-Uiy" firstAttribute="leading" secondItem="8ZN-Xt-JIq" secondAttribute="trailing" constant="14" id="PbY-6v-prM"/>
+                <constraint firstItem="VYf-Pe-V3o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="Ruo-Az-RGr"/>
+                <constraint firstAttribute="trailing" secondItem="RDz-sX-ogT" secondAttribute="trailing" constant="39" id="SXN-3b-PBi"/>
+                <constraint firstItem="kYR-f9-4tS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WyK-Ov-brc"/>
+                <constraint firstItem="c9E-3t-Uiy" firstAttribute="top" secondItem="wP3-kT-K0E" secondAttribute="bottom" constant="20" id="YQH-Tn-gkb"/>
+                <constraint firstItem="RDz-sX-ogT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="41" id="aR1-8p-9O7"/>
+                <constraint firstItem="RCu-lQ-qkM" firstAttribute="top" secondItem="wP3-kT-K0E" secondAttribute="bottom" constant="20" id="bOn-yy-wki"/>
+                <constraint firstAttribute="trailing" secondItem="3tI-kP-y5H" secondAttribute="trailing" constant="55" id="ccp-hC-KfK"/>
+                <constraint firstItem="RDz-sX-ogT" firstAttribute="top" secondItem="wP3-kT-K0E" secondAttribute="bottom" constant="4" id="czz-o6-QRG"/>
+                <constraint firstItem="Q3Q-DJ-1ch" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="d1l-75-n1i"/>
+                <constraint firstItem="3tI-kP-y5H" firstAttribute="top" secondItem="wP3-kT-K0E" secondAttribute="bottom" constant="-30" id="g1d-Ea-acD"/>
+                <constraint firstItem="VYf-Pe-V3o" firstAttribute="top" secondItem="wP3-kT-K0E" secondAttribute="bottom" constant="20" id="gtt-eX-RuU"/>
+                <constraint firstItem="wP3-kT-K0E" firstAttribute="top" secondItem="E0n-0I-YtT" secondAttribute="bottom" constant="40" id="iCS-XH-7DX"/>
+                <constraint firstItem="8ZN-Xt-JIq" firstAttribute="top" secondItem="VYf-Pe-V3o" secondAttribute="bottom" constant="-40" id="jZJ-7e-WSN"/>
+                <constraint firstAttribute="trailing" secondItem="c9E-3t-Uiy" secondAttribute="trailing" constant="46" id="npQ-xc-x6x"/>
+                <constraint firstItem="8Tm-9w-SzW" firstAttribute="top" secondItem="c9E-3t-Uiy" secondAttribute="bottom" constant="4" id="s3L-pm-J9h"/>
+                <constraint firstItem="Q3Q-DJ-1ch" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="svD-yx-a1W"/>
+                <constraint firstItem="E0n-0I-YtT" firstAttribute="top" secondItem="Q3Q-DJ-1ch" secondAttribute="bottom" constant="65" id="v4v-3N-5xB"/>
+                <constraint firstItem="VYf-Pe-V3o" firstAttribute="leading" secondItem="RCu-lQ-qkM" secondAttribute="trailing" constant="-68" id="yYC-v9-ebP"/>
+                <constraint firstItem="E0n-0I-YtT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="yu4-iy-Gox"/>
+                <constraint firstAttribute="trailing" secondItem="8Tm-9w-SzW" secondAttribute="trailing" constant="39" id="zLZ-2F-PIn"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_icon" width="20" height="20"/>
+        <image name="back_icon" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+        <array key="GOTHICB.TTF">
+            <string>CenturyGothic-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="CellicularTableViewCell" customModule="AuraApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media auto-download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2W-Da-rfV">
+                        <rect key="frame" x="12" y="8" width="260" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="cx9-Vd-6rL"/>
+                            <constraint firstAttribute="width" constant="260" id="ram-LE-G8j"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When using mobile data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEG-2f-aV2">
+                        <rect key="frame" x="12" y="39" width="260" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="260" id="UP9-Nj-2iW"/>
+                            <constraint firstAttribute="height" constant="25" id="jLU-3R-L1s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgo-Jh-R6y" customClass="NotificationButton" customModule="AuraApp" customModuleProvider="target">
+                        <rect key="frame" x="13" y="72" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="9YK-fI-p9i"/>
+                            <constraint firstAttribute="height" constant="20" id="jRv-pW-31e"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" image="radio_icon">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" image="radio_icon_sel"/>
+                        <connections>
+                            <action selector="mediaFileBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Vkc-nr-fFy"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLM-DU-ol4" customClass="NotificationButton" customModule="AuraApp" customModuleProvider="target">
+                        <rect key="frame" x="13" y="103" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="5ao-DA-EvF"/>
+                            <constraint firstAttribute="width" constant="20" id="y8m-ik-kaK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" image="radio_icon">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <state key="selected" image="radio_icon_sel"/>
+                        <connections>
+                            <action selector="photosBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lf8-rw-dLS"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No media files" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Dn-1i-MO0">
+                        <rect key="frame" x="43" y="72" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="043-Zq-Qfu"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="efJ-gp-e75"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8X-dg-kDc">
+                        <rect key="frame" x="43" y="103" width="156" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Om1-rR-7Yo"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="156" id="qkr-SU-lMa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="q2W-Da-rfV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="3gk-Ka-8a4"/>
+                    <constraint firstItem="cgo-Jh-R6y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="6qC-iC-mKW"/>
+                    <constraint firstItem="yEG-2f-aV2" firstAttribute="top" secondItem="q2W-Da-rfV" secondAttribute="bottom" constant="6" id="SnG-9E-hoq"/>
+                    <constraint firstItem="0Dn-1i-MO0" firstAttribute="top" secondItem="yEG-2f-aV2" secondAttribute="bottom" constant="8" id="Wcu-9b-cWu"/>
+                    <constraint firstItem="0Dn-1i-MO0" firstAttribute="leading" secondItem="cgo-Jh-R6y" secondAttribute="trailing" constant="10" id="XIY-eR-GR2"/>
+                    <constraint firstItem="yEG-2f-aV2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="XWd-wq-5Li"/>
+                    <constraint firstItem="jLM-DU-ol4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="i2t-cr-Ba7"/>
+                    <constraint firstItem="q2W-Da-rfV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="iGc-N6-bzK"/>
+                    <constraint firstItem="m8X-dg-kDc" firstAttribute="leading" secondItem="jLM-DU-ol4" secondAttribute="trailing" constant="10" id="kWJ-Jo-nsu"/>
+                    <constraint firstItem="m8X-dg-kDc" firstAttribute="top" secondItem="0Dn-1i-MO0" secondAttribute="bottom" constant="10" id="omh-Z0-ja6"/>
+                    <constraint firstItem="cgo-Jh-R6y" firstAttribute="top" secondItem="yEG-2f-aV2" secondAttribute="bottom" constant="8" id="qqH-SN-OqQ"/>
+                    <constraint firstItem="jLM-DU-ol4" firstAttribute="top" secondItem="cgo-Jh-R6y" secondAttribute="bottom" constant="11" id="yXz-NV-I0F"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="TopBtnConstraint" destination="qqH-SN-OqQ" id="bfG-wu-ibE"/>
+                <outlet property="autoDownloadLabel" destination="q2W-Da-rfV" id="pxD-l7-fV2"/>
+                <outlet property="mediaFileButton" destination="cgo-Jh-R6y" id="VuZ-Kd-Di7"/>
+                <outlet property="mobileDataLabel" destination="yEG-2f-aV2" id="AAV-Sk-4mt"/>
+                <outlet property="photosButton" destination="jLM-DU-ol4" id="YUg-e0-ahk"/>
+                <outlet property="topConstraint" destination="Wcu-9b-cWu" id="OSz-uP-li5"/>
+            </connections>
+            <point key="canvasLocation" x="22.5" y="26"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="radio_icon" width="34" height="34"/>
+        <image name="radio_icon_sel" width="34" height="34"/>
+    </resources>
+</document>

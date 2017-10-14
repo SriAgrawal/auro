@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0C6FFAED9CD5DDD063B1532E332BAFD6B41B640F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0C6FFAED9CD5DDD063B1532E332BAFD6B41B640F" : 9223372036854775807,
+    "219950E6826F7C1F670FA0165BD7BA6BE498F1F2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "978F25F9-850D-43D0-BCD8-668896224800",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0C6FFAED9CD5DDD063B1532E332BAFD6B41B640F" : "ineedaandroidiphonedevauraapp-17072980-ios\/",
+    "219950E6826F7C1F670FA0165BD7BA6BE498F1F2" : "..\/MealDeal\/Updated_MealDeal\/mealdealcusineshare-16092775-ios%202"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AuraApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AuraApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.mobiloitte.com\/root\/ineedaandroidiphonedevauraapp-17072980-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C6FFAED9CD5DDD063B1532E332BAFD6B41B640F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.mobiloitte.com\/root\/mealdealcusineshare-16092775-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "219950E6826F7C1F670FA0165BD7BA6BE498F1F2"
+    }
+  ]
+}

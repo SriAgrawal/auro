@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CellicularViewController" customModule="AuraApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cellicularTableView" destination="LNm-2O-tyg" id="JCg-Ju-UXs"/>
+                <outlet property="cellicularView" destination="CtW-F1-4yk" id="n4n-ou-2Fc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-F1-4yk" customClass="CustomShadow" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-gy-1Sa">
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="62" id="0I1-DY-Lvf"/>
+                                <constraint firstAttribute="height" constant="64" id="2Fj-oa-fVp"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Button" image="back_icon"/>
+                            <connections>
+                                <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="Ij8-Ku-yx7"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Usage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-45-6VX">
+                            <rect key="frame" x="128" y="22" width="119" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="Fzs-UR-L3J"/>
+                                <constraint firstAttribute="height" constant="25" id="NJt-Su-jcU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Vbu-45-6VX" firstAttribute="centerX" secondItem="CtW-F1-4yk" secondAttribute="centerX" id="3GM-b1-tnx"/>
+                        <constraint firstItem="Vbu-45-6VX" firstAttribute="top" secondItem="CtW-F1-4yk" secondAttribute="top" constant="22" id="7So-6h-L6w"/>
+                        <constraint firstAttribute="height" constant="64" id="CMF-ZG-2yL"/>
+                        <constraint firstItem="gKh-gy-1Sa" firstAttribute="top" secondItem="CtW-F1-4yk" secondAttribute="top" id="E4X-EA-8wa"/>
+                        <constraint firstItem="gKh-gy-1Sa" firstAttribute="leading" secondItem="CtW-F1-4yk" secondAttribute="leading" id="HDB-bu-0nJ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LNm-2O-tyg" customClass="EDKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="77" width="375" height="590"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="j3e-xi-N9p"/>
+                        <outlet property="delegate" destination="-1" id="o8W-Xv-KI4"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CtW-F1-4yk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5KB-IQ-Jia"/>
+                <constraint firstItem="LNm-2O-tyg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Jp-U4-e6W"/>
+                <constraint firstAttribute="trailing" secondItem="CtW-F1-4yk" secondAttribute="trailing" id="D0T-T8-BDp"/>
+                <constraint firstAttribute="bottom" secondItem="LNm-2O-tyg" secondAttribute="bottom" id="SAv-4K-irl"/>
+                <constraint firstItem="CtW-F1-4yk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gpF-dL-Qka"/>
+                <constraint firstAttribute="trailing" secondItem="LNm-2O-tyg" secondAttribute="trailing" id="pig-6D-DC7"/>
+                <constraint firstItem="LNm-2O-tyg" firstAttribute="top" secondItem="CtW-F1-4yk" secondAttribute="bottom" constant="13" id="vBe-kq-qN6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="32.5" y="91.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon" width="30" height="30"/>
+    </resources>
+</document>

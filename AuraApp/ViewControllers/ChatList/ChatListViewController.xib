@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatListViewController" customModule="AuraApp" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="VcL-Dm-aeg" id="Edc-ZB-gka"/>
+                <outlet property="chatListTableView" destination="0he-4t-7DM" id="fBa-Aj-Zdr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8y-VN-Qwg" customClass="CustomShadow" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-sO-Rj8">
+                            <rect key="frame" x="100" y="29" width="175" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="rUd-Gm-GPv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-Dm-aeg">
+                            <rect key="frame" x="2" y="4" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="D7M-AT-CXe"/>
+                                <constraint firstAttribute="width" constant="60" id="K04-Yf-p8g"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="back_icon"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="5jJ-at-whc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="PnK-sO-Rj8" firstAttribute="leading" secondItem="VcL-Dm-aeg" secondAttribute="trailing" constant="38" id="0uT-i3-lUE"/>
+                        <constraint firstItem="VcL-Dm-aeg" firstAttribute="top" secondItem="d8y-VN-Qwg" secondAttribute="top" constant="4" id="AoG-PC-fln"/>
+                        <constraint firstAttribute="height" constant="64" id="Elg-8L-UiT"/>
+                        <constraint firstItem="PnK-sO-Rj8" firstAttribute="centerX" secondItem="d8y-VN-Qwg" secondAttribute="centerX" id="aNj-nG-EKR"/>
+                        <constraint firstItem="VcL-Dm-aeg" firstAttribute="leading" secondItem="d8y-VN-Qwg" secondAttribute="leading" constant="2" id="cKU-vG-Rsz"/>
+                        <constraint firstItem="PnK-sO-Rj8" firstAttribute="top" secondItem="d8y-VN-Qwg" secondAttribute="top" constant="29" id="rOI-Zl-1hT"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0he-4t-7DM">
+                    <rect key="frame" x="0.0" y="87" width="375" height="580"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="npE-Hj-D1u"/>
+                        <outlet property="delegate" destination="-1" id="xxa-eV-bMw"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="d8y-VN-Qwg" secondAttribute="trailing" id="732-qa-Nu5"/>
+                <constraint firstItem="d8y-VN-Qwg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="83W-7t-BoM"/>
+                <constraint firstItem="0he-4t-7DM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9dT-Bm-iUp"/>
+                <constraint firstAttribute="bottom" secondItem="0he-4t-7DM" secondAttribute="bottom" id="KF0-yD-BD0"/>
+                <constraint firstItem="0he-4t-7DM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KaL-Ve-hlD"/>
+                <constraint firstAttribute="bottom" secondItem="0he-4t-7DM" secondAttribute="bottom" id="dWx-LM-1TG"/>
+                <constraint firstAttribute="trailing" secondItem="0he-4t-7DM" secondAttribute="trailing" id="hnk-x3-oCQ"/>
+                <constraint firstAttribute="trailing" secondItem="0he-4t-7DM" secondAttribute="trailing" id="o4O-Fz-Z4Q"/>
+                <constraint firstItem="0he-4t-7DM" firstAttribute="top" secondItem="d8y-VN-Qwg" secondAttribute="bottom" constant="23" id="oEL-6V-p1y"/>
+                <constraint firstItem="d8y-VN-Qwg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ug2-UU-9tx"/>
+            </constraints>
+            <point key="canvasLocation" x="40.5" y="48.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon" width="30" height="30"/>
+    </resources>
+</document>

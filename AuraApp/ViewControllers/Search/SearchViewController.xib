@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="AuraApp" customModuleProvider="target">
+            <connections>
+                <outlet property="searchTableView" destination="yXW-8X-2cn" id="FAo-E4-zT0"/>
+                <outlet property="searchTextField" destination="swm-D4-KpG" id="fxN-Kn-JHN"/>
+                <outlet property="searchView" destination="FhA-r0-qPA" id="Qyw-U0-t0C"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyj-XG-4MF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Yt-6x-wA2">
+                            <rect key="frame" x="113" y="29" width="149" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="uW7-Cd-tnS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOe-a4-efW">
+                            <rect key="frame" x="2" y="4" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="FZJ-fT-4n9"/>
+                                <constraint firstAttribute="width" constant="60" id="UFe-Ew-jHK"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="back_icon"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="3HI-MH-WA5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="8Yt-6x-wA2" firstAttribute="leading" secondItem="dOe-a4-efW" secondAttribute="trailing" constant="51" id="6ed-Xt-FMZ"/>
+                        <constraint firstItem="8Yt-6x-wA2" firstAttribute="top" secondItem="Gyj-XG-4MF" secondAttribute="top" constant="29" id="D2u-GT-ukN"/>
+                        <constraint firstAttribute="height" constant="64" id="Ibv-LO-QAq"/>
+                        <constraint firstItem="dOe-a4-efW" firstAttribute="top" secondItem="Gyj-XG-4MF" secondAttribute="top" constant="4" id="Zu3-CI-2DC"/>
+                        <constraint firstItem="8Yt-6x-wA2" firstAttribute="centerX" secondItem="Gyj-XG-4MF" secondAttribute="centerX" id="jck-er-mwG"/>
+                        <constraint firstItem="dOe-a4-efW" firstAttribute="leading" secondItem="Gyj-XG-4MF" secondAttribute="leading" constant="2" id="qNL-R0-4ob"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LpX-yJ-KI7">
+                    <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.9254416823387146" green="0.92552381753921509" blue="0.9253731369972229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0Ll-ir-o9Z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucT-4K-W4Q" customClass="CustomShadow" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="64" width="375" height="45"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FhA-r0-qPA">
+                            <rect key="frame" x="15" y="7" width="346" height="30"/>
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search by keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swm-D4-KpG" customClass="CustomTextField" customModule="AuraApp" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="346" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="ftV-Fj-gPO"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search_icon_gray" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-Tx-pen">
+                                    <rect key="frame" x="8" y="5" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="DSG-xy-DZn"/>
+                                        <constraint firstAttribute="height" constant="20" id="g86-oa-TzA"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qnJ-Tx-pen" firstAttribute="leading" secondItem="FhA-r0-qPA" secondAttribute="leading" constant="8" id="0TP-kj-PpJ"/>
+                                <constraint firstAttribute="height" constant="30" id="0WV-Wc-yPM"/>
+                                <constraint firstItem="qnJ-Tx-pen" firstAttribute="centerY" secondItem="FhA-r0-qPA" secondAttribute="centerY" id="H0a-hZ-del"/>
+                                <constraint firstItem="swm-D4-KpG" firstAttribute="leading" secondItem="qnJ-Tx-pen" secondAttribute="trailing" constant="-28" id="Rqf-5T-r4D"/>
+                                <constraint firstItem="swm-D4-KpG" firstAttribute="centerY" secondItem="qnJ-Tx-pen" secondAttribute="centerY" id="alS-PF-meC"/>
+                                <constraint firstAttribute="trailing" secondItem="swm-D4-KpG" secondAttribute="trailing" id="oAS-Ve-HOo"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="FhA-r0-qPA" secondAttribute="trailing" constant="14" id="BZu-ef-iMJ"/>
+                        <constraint firstAttribute="height" constant="45" id="bmO-jy-Baa"/>
+                        <constraint firstItem="FhA-r0-qPA" firstAttribute="leading" secondItem="ucT-4K-W4Q" secondAttribute="leading" constant="15" id="jEP-MH-saS"/>
+                        <constraint firstItem="FhA-r0-qPA" firstAttribute="top" secondItem="ucT-4K-W4Q" secondAttribute="top" constant="7" id="zLy-SO-F0n"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yXW-8X-2cn">
+                    <rect key="frame" x="0.0" y="109" width="375" height="558"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dmV-2U-fMv"/>
+                        <outlet property="delegate" destination="-1" id="CFK-89-eYe"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yXW-8X-2cn" firstAttribute="top" secondItem="ucT-4K-W4Q" secondAttribute="bottom" id="5Ge-It-vV0"/>
+                <constraint firstItem="LpX-yJ-KI7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AUp-Co-WCQ"/>
+                <constraint firstAttribute="bottom" secondItem="yXW-8X-2cn" secondAttribute="bottom" id="HVz-qJ-4gD"/>
+                <constraint firstItem="ucT-4K-W4Q" firstAttribute="top" secondItem="LpX-yJ-KI7" secondAttribute="bottom" constant="-1" id="Ml2-Hd-9CK"/>
+                <constraint firstAttribute="trailing" secondItem="ucT-4K-W4Q" secondAttribute="trailing" id="PpN-5t-msO"/>
+                <constraint firstItem="Gyj-XG-4MF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TB7-gh-4U3"/>
+                <constraint firstAttribute="trailing" secondItem="LpX-yJ-KI7" secondAttribute="trailing" id="Ul3-3X-9Y4"/>
+                <constraint firstAttribute="trailing" secondItem="Gyj-XG-4MF" secondAttribute="trailing" id="Wg8-6E-7QD"/>
+                <constraint firstItem="Gyj-XG-4MF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y9V-sX-AlA"/>
+                <constraint firstItem="yXW-8X-2cn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YUE-cz-dKt"/>
+                <constraint firstAttribute="trailing" secondItem="yXW-8X-2cn" secondAttribute="trailing" id="jzX-Lx-Qo7"/>
+                <constraint firstItem="ucT-4K-W4Q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rYr-x6-zK7"/>
+                <constraint firstItem="LpX-yJ-KI7" firstAttribute="top" secondItem="Gyj-XG-4MF" secondAttribute="bottom" id="xac-Sv-5Sc"/>
+            </constraints>
+            <point key="canvasLocation" x="25.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon" width="30" height="30"/>
+        <image name="search_icon_gray" width="30" height="30"/>
+    </resources>
+</document>

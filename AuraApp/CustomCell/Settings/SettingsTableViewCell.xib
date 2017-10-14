@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="SettingsTableViewCell" customModule="AuraApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-qs-udO">
+                        <rect key="frame" x="58" y="14" width="249" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="1Yr-Ef-r75"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zAs-eh-vfx">
+                        <rect key="frame" x="10" y="8" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="D8C-3l-hAY"/>
+                            <constraint firstAttribute="width" constant="35" id="Hfn-aE-0MC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmx-ye-gxd">
+                        <rect key="frame" x="60" y="49" width="310" height="1"/>
+                        <color key="backgroundColor" red="0.96854275465011597" green="0.96868163347244263" blue="0.96851247549057007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Qtq-kl-4ku"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cmx-ye-gxd" secondAttribute="trailing" constant="5" id="1ea-eH-9Og"/>
+                    <constraint firstItem="cmx-ye-gxd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="2FM-Ob-C8Z"/>
+                    <constraint firstItem="c2x-qs-udO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="7Vb-6B-Pyc"/>
+                    <constraint firstItem="c2x-qs-udO" firstAttribute="leading" secondItem="zAs-eh-vfx" secondAttribute="trailing" constant="13" id="8bU-Et-6yl"/>
+                    <constraint firstAttribute="bottom" secondItem="cmx-ye-gxd" secondAttribute="bottom" constant="4.5" id="Fbx-8C-jzK"/>
+                    <constraint firstItem="zAs-eh-vfx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Kkf-ck-whH"/>
+                    <constraint firstAttribute="trailing" secondItem="c2x-qs-udO" secondAttribute="trailing" constant="68" id="QVE-Mh-PHw"/>
+                    <constraint firstItem="zAs-eh-vfx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eQ6-9q-kZ9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="settingsImageView" destination="zAs-eh-vfx" id="kbB-kc-o2x"/>
+                <outlet property="settingsLabel" destination="c2x-qs-udO" id="aOb-SP-fsQ"/>
+            </connections>
+            <point key="canvasLocation" x="-76.5" y="19.5"/>
+        </tableViewCell>
+    </objects>
+</document>

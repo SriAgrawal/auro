@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHIC.TTF">
+            <string>CenturyGothic</string>
+        </array>
+        <array key="GOTHICB.TTF">
+            <string>CenturyGothic-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompleteProfileViewController" customModule="AuraApp" customModuleProvider="target">
+            <connections>
+                <outlet property="ProfileTableView" destination="dLc-hJ-hG9" id="5FL-LC-GbS"/>
+                <outlet property="editProfileView" destination="NSh-YT-meA" id="Qyj-4R-qcV"/>
+                <outlet property="profileButton" destination="Nnt-D7-xUq" id="Oa3-qS-HjU"/>
+                <outlet property="profileFooterView" destination="dbT-bz-tHb" id="Ygv-Z3-cFB"/>
+                <outlet property="profileHeaderView" destination="Bls-xb-oZ8" id="vnp-Mv-EMn"/>
+                <outlet property="profileImageView" destination="NxG-1g-DYO" id="7As-3c-L1Y"/>
+                <outlet property="profileView" destination="5g6-Oc-aP6" id="h1N-Xj-Cgv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5g6-Oc-aP6" customClass="CustomShadow" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6d-8v-C34">
+                            <rect key="frame" x="2" y="4" width="60" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="LXk-5x-lhh"/>
+                                <constraint firstAttribute="height" constant="60" id="X3P-o0-NrI"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="9" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Button" image="back_icon"/>
+                            <connections>
+                                <action selector="backButtonAction:" destination="-1" eventType="touchUpInside" id="Wah-2q-a9y"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Complete Your Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U59-tX-DAL">
+                            <rect key="frame" x="115" y="21" width="146" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="jOT-bP-2bf"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="119" id="xmM-5Q-HN9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="U59-tX-DAL" firstAttribute="centerX" secondItem="5g6-Oc-aP6" secondAttribute="centerX" id="5nE-XG-huk"/>
+                        <constraint firstItem="I6d-8v-C34" firstAttribute="leading" secondItem="5g6-Oc-aP6" secondAttribute="leading" constant="2" id="eSO-6g-IJV"/>
+                        <constraint firstAttribute="height" constant="64" id="mj5-aI-cvK"/>
+                        <constraint firstItem="I6d-8v-C34" firstAttribute="top" secondItem="5g6-Oc-aP6" secondAttribute="top" constant="4" id="r48-eU-tm4"/>
+                        <constraint firstItem="U59-tX-DAL" firstAttribute="top" secondItem="5g6-Oc-aP6" secondAttribute="top" constant="21" id="uAG-dc-SJF"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dLc-hJ-hG9" customClass="EDKeyboardAvoidingTableView">
+                    <rect key="frame" x="0.0" y="89" width="375" height="578"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Jqf-d6-KyS"/>
+                        <outlet property="delegate" destination="-1" id="Erc-0M-h9g"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5g6-Oc-aP6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Xd-xV-VzZ"/>
+                <constraint firstItem="dLc-hJ-hG9" firstAttribute="top" secondItem="5g6-Oc-aP6" secondAttribute="bottom" constant="25" id="PiC-Oa-ty4"/>
+                <constraint firstItem="dLc-hJ-hG9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TBI-SS-yzS"/>
+                <constraint firstAttribute="bottom" secondItem="dLc-hJ-hG9" secondAttribute="bottom" id="bZt-aj-zhi"/>
+                <constraint firstAttribute="trailing" secondItem="dLc-hJ-hG9" secondAttribute="trailing" id="h6A-p5-gAY"/>
+                <constraint firstAttribute="trailing" secondItem="5g6-Oc-aP6" secondAttribute="trailing" id="nVv-P1-CSF"/>
+                <constraint firstItem="5g6-Oc-aP6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pUo-p2-AmS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="Bls-xb-oZ8">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSh-YT-meA">
+                    <rect key="frame" x="127" y="23" width="122" height="122"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="Ayf-bi-ark"/>
+                        <constraint firstAttribute="height" constant="122" id="eFu-BH-0GP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_img" translatesAutoresizingMaskIntoConstraints="NO" id="NxG-1g-DYO">
+                    <rect key="frame" x="127" y="23" width="122" height="122"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="DbF-bG-9r2"/>
+                        <constraint firstAttribute="height" constant="122" id="L1y-ob-S35"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nnt-D7-xUq">
+                    <rect key="frame" x="219" y="10" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="q6b-uB-yf1"/>
+                        <constraint firstAttribute="width" constant="40" id="zBL-Wm-Wwr"/>
+                    </constraints>
+                    <state key="normal" image="camera_icon"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="profileButtonAction:" destination="-1" eventType="touchUpInside" id="SBt-cS-kyM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="NxG-1g-DYO" firstAttribute="centerX" secondItem="Bls-xb-oZ8" secondAttribute="centerX" constant="0.5" id="59w-5K-YuX"/>
+                <constraint firstItem="NSh-YT-meA" firstAttribute="top" secondItem="Bls-xb-oZ8" secondAttribute="top" constant="23" id="W8R-lN-pyT"/>
+                <constraint firstItem="NxG-1g-DYO" firstAttribute="top" secondItem="Nnt-D7-xUq" secondAttribute="bottom" constant="-27" id="bw2-aR-fOR"/>
+                <constraint firstItem="NxG-1g-DYO" firstAttribute="top" secondItem="Bls-xb-oZ8" secondAttribute="top" constant="23" id="rXx-Wr-t2d"/>
+                <constraint firstItem="NxG-1g-DYO" firstAttribute="trailing" secondItem="Nnt-D7-xUq" secondAttribute="trailing" constant="-10" id="xWg-xl-cuR"/>
+                <constraint firstItem="NSh-YT-meA" firstAttribute="centerX" secondItem="Bls-xb-oZ8" secondAttribute="centerX" constant="0.5" id="zZJ-zU-agG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="533.5" y="-117.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="dbT-bz-tHb">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IN7-gu-auI" customClass="CustomButton" customModule="AuraApp" customModuleProvider="target">
+                    <rect key="frame" x="112" y="82" width="161" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="161" id="3Ik-Vf-oMZ"/>
+                        <constraint firstAttribute="height" constant="40" id="DaV-VY-9FB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
+                    <state key="normal" title="Save">
+                        <color key="titleColor" red="0.96854275469999995" green="0.96868163350000003" blue="0.96851247549999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="eTb-Ug-Zai"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofn-a1-aAe">
+                    <rect key="frame" x="112.5" y="14" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="9rQ-Px-28x"/>
+                        <constraint firstAttribute="height" constant="30" id="zvI-6L-Y9b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Current Location" image="map_icon">
+                        <color key="titleColor" red="0.2250552177" green="0.78940039870000001" blue="0.77760428189999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="currentLocationAction:" destination="-1" eventType="touchUpInside" id="bSc-hw-rAm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="IN7-gu-auI" firstAttribute="centerX" secondItem="dbT-bz-tHb" secondAttribute="centerX" constant="5" id="T3G-um-kvE"/>
+                <constraint firstItem="ofn-a1-aAe" firstAttribute="top" secondItem="dbT-bz-tHb" secondAttribute="top" constant="14" id="U1g-68-0MQ"/>
+                <constraint firstItem="ofn-a1-aAe" firstAttribute="centerX" secondItem="dbT-bz-tHb" secondAttribute="centerX" id="kUy-CR-Jac"/>
+                <constraint firstItem="IN7-gu-auI" firstAttribute="top" secondItem="dbT-bz-tHb" secondAttribute="top" constant="82" id="n8e-9q-sW2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="807.5" y="-329.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back_icon" width="30" height="30"/>
+        <image name="camera_icon" width="46" height="46"/>
+        <image name="map_icon" width="23" height="23"/>
+        <image name="profile_img" width="142" height="141"/>
+    </resources>
+</document>
